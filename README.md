@@ -7,6 +7,7 @@ The Inventory App is designed to help businesses efficiently manage their stock 
 Inventory App is a React.js application for managing tasks. It offers user authentication, role-based access, and a beautiful UI for task organization.
 
 📂 Features
+
 ✔️ User Registration & Login
 ✔️ JWT-based Authentication
 ✔️ Role-Based Access Control (Admin/User)
