@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+🚀 Inventory App
+📦 Streamline Your Stock, Empower Your Business!".
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🌟 Overview
+The Inventory App is designed to help businesses efficiently manage their stock levels, streamline operations, and minimize waste. Whether you're running a retail store, a warehouse, or an e-commerce platform, this app provides a centralized system to track, monitor, and optimize inventory in real-time.
 
-## Available Scripts
+Inventory App is a React.js application for managing tasks. It offers user authentication, role-based access, and a beautiful UI for task organization.
 
-In the project directory, you can run:
+📂 Features
+✔️ User Registration & Login
+✔️ JWT-based Authentication
+✔️ Role-Based Access Control (Admin/User)
+✔️ Task Management (CRUD Operations)
+✔️ Task Sorting & Filtering
+✔️ Notifications with react-toastify
+✔️ Responsive Design
+✔️ Pagination
 
-### `npm start`
+🛠️ Tech Stack
+Frontend: React.js, HTML, CSS, Bootstrap
+Authentication: JWT (JSON Web Tokens)
+Libraries: Axios, React Toastify, React Router
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+🎨 Screenshots
+1️⃣ Login Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2️⃣ Task Dashboard
 
-### `npm test`
+📦 Installation
+Prerequisites
+📥 Make sure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Node.js
+MongoDB
+Steps to Run
+Clone the repository:
+bash
+Copy code
+git clone https://github.com/username/project-name.git  
+Navigate to the project directory:
+bash
+Copy code
+cd project-name  
+Install dependencies:
+bash
+Copy code
+npm install  
+Start the application:
+bash
+Copy code
+npm start  
 
-### `npm run build`
+📜 API Endpoints
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Authentication
+POST /api/register - Register a new user
+POST /api/login - Login and get a token
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Tasks
+GET /api/tasks - Get all tasks
+POST /api/tasks - Create a new task
+PUT /api/tasks/:id - Update a task
+DELETE /api/tasks/:id - Delete a task
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🧪 Testing
+Run tests using Jest:
 
-### `npm run eject`
+bash
+Copy code
+npm test  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🤝 Contributing
+Contributions are welcome! Follow these steps:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Fork the project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Create a new branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+👨‍💻 Author
+👤 Name: Akshar Gabani
 
-## Learn More
+📄 License
+📜 This project is licensed under the MIT License.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🌐 Live Demo : https://inventory-app-nu-cyan.vercel.app/
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+General Technology
+#TechInnovation
+#WebDevelopment
+#ReactJS
+#JavaScriptApps
+#OpenSourceProjects
 
-### Code Splitting
+Inventory Management
+#InventoryApp
+#StockManagement
+#InventorySolutions
+#BusinessTools
+#InventoryControl
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+App Features & Benefits
+#TaskManagement
+#RoleBasedAccess
+#CRUDOperations
+#TaskSorting
+#RealTimeTracking
 
-### Analyzing the Bundle Size
+Developer & Community Tags
+#CodeWithReact
+#DevCommunity
+#TechProjects
+#ReactDevelopers
+#SoftwareDevelopment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Specific SEO Tags
+#BusinessEfficiency
+#ProductivityTools
+#WarehouseManagement
+#ECommerceTools
+#StreamlineInventory
