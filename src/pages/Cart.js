@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import OrderForm from '../components/OrderForm';
 
-// Import icons from Heroicons v2
+
 import { TrashIcon, ShoppingCartIcon } from '@heroicons/react/24/solid';
 
 function Cart() {
@@ -38,14 +38,14 @@ function Cart() {
                 </div>
             ) : (
                 <div className="lg:grid lg:grid-cols-4 lg:gap-8">
-                    {/* Main Content */}
+                    
                     <div className="lg:col-span-3 space-y-6">
                         {cart.map((item) => (
                             <div
                                 key={item.id}
                                 className="flex flex-col lg:grid lg:grid-cols-4 items-center lg:items-stretch p-4 sm:p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
                             >
-                                {/* Product Image */}
+                                
                                 <div className="lg:col-span-1 flex justify-center items-center">
                                     <img
                                         src={item.image || item.thumbnail}
@@ -54,7 +54,7 @@ function Cart() {
                                     />
                                 </div>
 
-                                {/* Product Details */}
+                               
                                 <div className="lg:col-span-2 flex flex-col justify-center lg:pl-6">
                                     <h3 className="text-lg sm:text-xl font-semibold text-gray-800">
                                         {item.name || item.title}
@@ -70,7 +70,7 @@ function Cart() {
                                     </p>
                                 </div>
 
-                                {/* Action Buttons */}
+                               
                                 <div className="lg:col-span-1 flex lg:flex-col lg:justify-center lg:space-y-4 mt-4 lg:mt-0 space-x-4 lg:space-x-0">
                                     <button
                                         onClick={() => handleRemoveFromCart(item.id)}
@@ -91,7 +91,7 @@ function Cart() {
                         ))}
                     </div>
 
-                    {/* Sidebar */}
+                    
                     <div className="lg:col-span-1 bg-white p-6 rounded-lg shadow-md">
                         <h3 className="text-xl font-semibold text-gray-800 mb-4">
                             Cart Summary

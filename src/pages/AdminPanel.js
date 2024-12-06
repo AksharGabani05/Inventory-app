@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react';
 
 function AdminPanel() {
-  const [products, setProducts] = useState([]);  // Empty array initially, will be populated from API
+  const [products, setProducts] = useState([]);
   const [newProduct, setNewProduct] = useState({ name: '', price: '', stock: '', image: '' });
   const [editingProduct, setEditingProduct] = useState(null);
 
-  // Fetch products from the API when the component mounts
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await fetch('https://dummyjson.com/products');
         const data = await response.json();
-        setProducts(data.products);  // Set the fetched products to the state
+        setProducts(data.products); 
       } catch (error) {
         console.error('Error fetching products:', error);
       }
@@ -20,44 +19,38 @@ function AdminPanel() {
     fetchProducts();
   }, []);
 
-  // Handle form input changes
   const handleInputChange = (e) => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
   };
 
-  // Handle image file change
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setNewProduct({ ...newProduct, image: reader.result }); // Set the image as Base64 string
+        setNewProduct({ ...newProduct, image: reader.result });
       };
       reader.readAsDataURL(file);
     }
   };
 
-  // Add a new product to the list
+
   const addProduct = () => {
     if (newProduct.name && newProduct.price && newProduct.stock && newProduct.image) {
-      // Simulate adding the product to the list (not interacting with the API)
       setProducts([...products, { ...newProduct, id: products.length + 1 }]);
       setNewProduct({ name: '', price: '', stock: '', image: '' });
     }
   };
-
-  // Delete a product from the list
   const deleteProduct = (id) => {
     setProducts(products.filter((product) => product.id !== id));
   };
 
-  // Start editing a product
+
   const startEditing = (product) => {
     setEditingProduct(product);
     setNewProduct(product);
   };
 
-  // Update the product in the list
   const updateProduct = () => {
     if (newProduct.name && newProduct.price && newProduct.stock && newProduct.image) {
       setProducts(
@@ -72,9 +65,8 @@ function AdminPanel() {
 
   return (
     <div className="p-8 bg-gradient-to-r from-blue-50 via-green-100 to-yellow-100 min-h-screen">
-      <h1 className="text-3xl font-extrabold text-center text-orange-600 mb-10">Admin Panel</h1>
+      <h1 className="text-3xl font-extrabold text-center mb-10">Admin Panel</h1>
 
-      {/* Add/Edit Product Form */}
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-lg mx-auto mb-12">
         <h3 className="text-2xl font-semibold text-center text-violet-950 mb-6">
           {editingProduct ? 'Edit Product' : 'Add New Product'}
@@ -104,14 +96,14 @@ function AdminPanel() {
             placeholder="Product Stock"
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
-          {/* File Input for Image */}
+        
           <input
             type="file"
             accept="image/*"
             onChange={handleImageChange}
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
           />
-          {/* Display image preview */}
+         
           {newProduct.image && (
             <div className="mt-4">
               <img src={newProduct.image} alt="Product" className="w-full h-40 object-cover rounded-md" />
@@ -126,12 +118,11 @@ function AdminPanel() {
         </div>
       </div>
 
-      {/* Product List */}
       <h3 className="text-2xl font-bold text-center text-gray-800 mb-8">Product List</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {products.map((product) => (
           <div key={product.id} className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
-            {/* Ensure the image URL is correctly used */}
+          
             <img
               src={product.thumbnail ? (product.thumbnail.startsWith('http') ? product.thumbnail : `https://dummyjson.com${product.thumbnail}`) : 'https://via.placeholder.com/150'}
               alt={product.name}

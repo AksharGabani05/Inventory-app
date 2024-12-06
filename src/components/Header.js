@@ -13,18 +13,18 @@ function Header() {
   }, []);
 
   return (
-    <header className="bg-gradient-to-r from-purple-800 via-indigo-700 to-purple-900 shadow-lg text-white">
-      <nav className="container mx-auto p-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link to="/" className="text-3xl font-extrabold tracking-wide">
-          Inventory<span className="text-orange-500">App</span>
+    <header className="bg-white text-black shadow-md">
+      <nav className="container mx-auto p-6 flex justify-between items-center">
+       
+        <Link to="/" className="text-4xl font-bold hover:text-orange-400 transition duration-300">
+          inventaryApp
         </Link>
 
-        {/* Hamburger Button for Mobile */}
+      
         <div className="lg:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none"
+            className="text-black focus:outline-none"
           >
             <svg
               className="w-8 h-8"
@@ -43,7 +43,7 @@ function Header() {
           </button>
         </div>
 
-        {/* Navigation Links */}
+        
         <ul className="hidden lg:flex items-center space-x-8 text-lg font-medium">
           <li>
             <Link to="/products" className="hover:text-orange-400 transition duration-300">
@@ -55,16 +55,7 @@ function Header() {
               Cart
             </Link>
           </li>
-          <li>
-            <Link to="/orders" className="hover:text-orange-400 transition duration-300">
-              Orders
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-orange-400 transition duration-300">
-              Contact
-            </Link>
-          </li>
+          
           {userRole === 'admin' && (
             <li>
               <Link to="/admin" className="hover:text-orange-400 transition duration-300">
@@ -86,9 +77,9 @@ function Header() {
         </ul>
       </nav>
 
-      {/* Mobile Dropdown */}
+  
       {isOpen && (
-        <ul className="lg:hidden bg-purple-800 text-white shadow-md rounded-md space-y-4 p-6 absolute top-16 left-0 right-0 z-50">
+        <ul className="lg:hidden bg-white text-black shadow-md rounded-md space-y-4 p-6 absolute top-16 left-0 right-0 z-50">
           <li>
             <Link to="/products" className="block hover:text-orange-400 transition">
               Products
@@ -99,16 +90,8 @@ function Header() {
               Cart
             </Link>
           </li>
-          <li>
-            <Link to="/orders" className="block hover:text-orange-400 transition">
-              Orders
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="block hover:text-orange-400 transition">
-              Contact
-            </Link>
-          </li>
+          
+          
           {userRole === 'admin' && (
             <li>
               <Link to="/admin" className="block hover:text-orange-400 transition">

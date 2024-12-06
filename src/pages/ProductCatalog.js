@@ -9,7 +9,7 @@ function ProductCatalog() {
   const [loading, setLoading] = useState(true);
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Fetch products from the API
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -89,13 +89,13 @@ function ProductCatalog() {
         ))}
       </div>
 
-      {/* Product Details Modal */}
+     
       {selectedProduct && (
         <div className="fixed inset-0 bg-gray-600 bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-6 rounded-lg max-w-lg w-full">
             <h3 className="text-2xl font-bold mb-4">{selectedProduct.title}</h3>
             <img
-              src={selectedProduct.image || selectedProduct.images[0]} // Use correct property for image
+              src={selectedProduct.image || selectedProduct.images[0]}
               alt={selectedProduct.title}
               className="w-full h-60 object-cover rounded mb-4"
             />

@@ -5,12 +5,10 @@ import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
 import ProductCatalog from './pages/ProductCatalog';
 import Cart from './pages/Cart';
-import OrderHistory from './pages/OrderHistory';
 import AdminPanel from './pages/AdminPanel';
 import PrivateRoute from './components/PrivateRoute';
 import { CartProvider } from './context/CartContext'; 
 import { useLocation } from 'react-router-dom';
-import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -53,14 +51,7 @@ function Main() {
               </PrivateRoute>
             } 
           />
-          <Route 
-            path="/orders" 
-            element={
-              <PrivateRoute>
-                <OrderHistory />
-              </PrivateRoute>
-            } 
-          />
+          
           <Route 
             path="/admin" 
             element={
@@ -69,18 +60,11 @@ function Main() {
               </PrivateRoute>
             } 
           />
-          <Route 
-            path="/contact" 
-            element={
-              <PrivateRoute>
-                <Contact />
-              </PrivateRoute>
-            } 
-          />
+          
         </Routes>
       </main>
       
-      {/* Conditionally render Footer if not on login or signup pages */}
+      
       {!isAuthPage && <Footer />}
     </div>
   );
