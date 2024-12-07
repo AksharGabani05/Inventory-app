@@ -26,7 +26,6 @@ function Main() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Conditionally render Header if not on login or signup pages */}
       {!isAuthPage && <Header />}
       
       <main className="flex-grow">
@@ -34,7 +33,7 @@ function Main() {
           <Route path="/" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           
-          {/* Private Routes */}
+       
           <Route 
             path="/products" 
             element={
